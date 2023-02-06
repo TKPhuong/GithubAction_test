@@ -22,4 +22,6 @@ jobs:
       run: mvn clean install
 
     - name: Test with JUnit
-      run: mvn clean test jacoco:report
+      run: |
+      mvn test
+      mvn site
