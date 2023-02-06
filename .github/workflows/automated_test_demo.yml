@@ -22,6 +22,7 @@ jobs:
       run: mvn clean install
 
     - name: Test with JUnit
-      run: |
-      mvn test
-      mvn site
+      run: mvn test
+      
+    - name: Test report output
+      run: mvn site
