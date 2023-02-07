@@ -29,4 +29,4 @@ jobs:
                 install \
                 test -Dmaven.test.failure.ignore=true \
                 site -DgenerateReports=false \
-                surefire-report:report
+                surefire-report:report-only
