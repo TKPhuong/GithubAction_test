@@ -23,7 +23,7 @@ jobs:
 
     - name: Test with JUnit
       run: mvn test \
-               site
+               surefire-report:report
       
     # - name: Test report output
     #   #           test -Dmaven.test.failure.ignore=true \
