@@ -28,3 +28,13 @@ jobs:
     #   #           test -Dmaven.test.failure.ignore=true \
     #   #           site -DgenerateReports=false \
     #   #           surefire-report:report-only
+
+    - name: Set status
+      if: always()
+      uses: actions/set-status@v1
+      with:
+        state: ${{ job.status == 'success' ? 'success' : 'failure' }}
+        target_url: ${{ env.BUILD_URL }}
+        description: The tests ${{ job.status == 'success' ? 'passed' : 'failed' }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GA_TOKEN }}
