@@ -28,11 +28,3 @@ jobs:
     #   #           test -Dmaven.test.failure.ignore=true \
     #   #           site -DgenerateReports=false \
     #   #           surefire-report:report-only
-
-    - name: Set status
-      if: always()
-      uses: actions/bin/filter@v1
-      with:
-        args: status success ${{ job.status == 'success' }}
-      env:
-        GITHUB_TOKEN: ${{ secrets.GA_TOKEN }}
