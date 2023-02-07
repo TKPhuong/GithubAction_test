@@ -25,4 +25,7 @@ jobs:
       run: mvn test
       
     - name: Test report output
-      run: mvn site
+      run: mvn clean \
+                test -Dmaven.test.failure.ignore=true \
+                site -DgenerateReports=false \
+                surefire-report:report
