@@ -24,9 +24,9 @@ jobs:
     - name: Test with JUnit
       run: mvn test
       
-    - name: Test report output
-      run: mvn clean \
-                install \
-                test -Dmaven.test.failure.ignore=true \
-                site -DgenerateReports=false \
-                surefire-report:report-only
+    # - name: Test report output
+    #   # run: mvn clean \
+    #   #           install \
+    #   #           test -Dmaven.test.failure.ignore=true \
+    #   #           site -DgenerateReports=false \
+    #   #           surefire-report:report-only
