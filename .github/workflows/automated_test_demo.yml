@@ -31,10 +31,8 @@ jobs:
 
     - name: Set status
       if: always()
-      uses: actions/set-status@v1
+      uses: actions/bin/filter@v1
       with:
-        state: ${{ job.status == 'success' ? 'success' : 'failure' }}
-        target_url: ${{ env.BUILD_URL }}
-        description: The tests ${{ job.status == 'success' ? 'passed' : 'failed' }}
+        args: status success ${{ job.status == 'success' }}
       env:
         GITHUB_TOKEN: ${{ secrets.GA_TOKEN }}
