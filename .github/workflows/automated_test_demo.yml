@@ -22,11 +22,10 @@ jobs:
       run: mvn clean install
 
     - name: Test with JUnit
-      run: mvn test
+      run: mvn test \
+               site
       
     # - name: Test report output
-    #   # run: mvn clean \
-    #   #           install \
     #   #           test -Dmaven.test.failure.ignore=true \
     #   #           site -DgenerateReports=false \
     #   #           surefire-report:report-only
