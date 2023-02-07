@@ -21,7 +21,7 @@ public class BankAccountTest {
     @org.junit.Test
     public void deposit() throws Exception {
         double balance = account.deposit(200.00, true);
-        assertEquals(1205.00, balance, 0);
+        assertEquals(1200.00, balance, 0);
     }
 
     @org.junit.Test
