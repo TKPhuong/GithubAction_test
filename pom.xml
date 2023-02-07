@@ -91,5 +91,13 @@
       </plugins>
     </pluginManagement>
   </build>
-
+  <repositories>
+  <repository>
+    <id>central</id>
+    <url>https://repo.maven.apache.org/maven2</url>
+    <releases>
+      <enabled>true</enabled>
+    </releases>
+  </repository>
+</repositories>
 </project>
