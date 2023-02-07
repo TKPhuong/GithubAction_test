@@ -1,1 +1,1 @@
-![example event parameter](https://github.com/github/docs/actions/workflows/automated_test_demo.yml/badge.svg?event=push)
+[![Test](https://github.com/TKPhuong/GithubAction_test/actions/workflows/automated_test_demo.yml/badge.svg)](https://github.com/TKPhuong/GithubAction_test/actions/workflows/automated_test_demo.yml)
